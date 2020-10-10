@@ -5,6 +5,7 @@ import wikipedia
 import webbrowser
 import os
 import random
+import smtplib
 
 number_list = [0,1,2]
 
@@ -20,6 +21,17 @@ engine.setProperty('voice', voices[0].id) # set voice
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
+    
+ 
+# sending email functionality
+# for email sending function first change setting of your email and set it to control access to less secure app
+def sendEmail(to, content):
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.ehlo()
+    server.starttls()
+    server.login('your email address', 'password')
+    server.sendmail('your email address', to, content)
+    server.close()
 
 def wishMe():
     hour = int(datetime.datetime.now().hour) 
@@ -103,6 +115,19 @@ if __name__ == "__main__":
        
         elif 'twitter ' in query:
             webbrowser.open("twitter.com")
+            
+        elif 'email to' in query:
+            try:
+                speak("Sir, give me your message")
+                print('Give message.......')
+                content = takeCommand()
+                to = "receiver email address"
+                sendEmail(to, content)
+                print('Sending mail........')
+                speak("Email has been sent!")
+            except Exception as e:
+                print(e)
+                speak("Sorry master . I am not able to send this email")
         
         elif 'exit' in query:
             exit(0)
