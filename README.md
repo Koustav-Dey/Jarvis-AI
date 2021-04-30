@@ -11,7 +11,7 @@ The implemented assistant can open up the application (if it’s installed in th
 ---
 ### Working Process
 
-During a port scan, hackers send a message to each port, one at a time. The response they receive from each port determines whether it's being used and reveals potential weaknesses. Security techs can routinely conduct port scanning for network inventory and to expose possible security vulnerabilities.
+1. Speak something <br> 2. Jarvis record the voice and match with the available commands <br>3. If it is available then proper response is provided <br>4. And proper action is taken.
 
 
 ### Use This For Control Your Desktop/Laptop With Voice -☠️
@@ -23,3 +23,5 @@ You can also upgrade this and add many more Features.
 <p>
 pyttsx3<br>datetime<br>speech_recognition<br>wikipedia<br>webbrowser<br>os<br>random<br>socket<br>time<br>sys<br>pyjokes<br>psutil<br>smtplib<br>opencv<br>requests<br>
 </p>
+ ---
+Avdantages : <br>1. Easy to use <br>2. Can work with variety of commands <br>3. Custom commands <br>4. Secure <br>5. Helpful for disabled <br>6. Artificial Intelligent
